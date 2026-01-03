@@ -35,14 +35,14 @@ export default function Hero() {
 
         <div className="flex items-center gap-4 text-sm opacity-80 mb-6">
           <span className="w-12 h-px bg-white/40" />
-          Welcome to ATA Electronics
+          Precision Power Performance
           <span className="w-12 h-px bg-white/40" />
         </div>
 
         <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
-          ILLUMINATING EXCELLENCE,
+          ATA Electronics
           <br />
-          DEFINING LUXURY
+          <span className="text-[#d4af37]">DEFINING LUXURY</span>
         </h1>
 
         {/* STATS */}

@@ -10,7 +10,7 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-black overflow-hidden text-white flex items-center justify-center">
+    <section className="relative min-h-screen overflow-hidden text-white flex items-center justify-center">
 
       {/* LEFT IMAGE (placeholder) */}
       <div
@@ -20,7 +20,7 @@ export default function ServicesSection() {
         }}
       >
         {/* ADD IMAGE HERE */}
-        <img src="public/ata(1).jpg" className="w-full h-full object-cover" />
+        <img src="/ata(1).jpg" className="w-full h-full object-cover" />
       </div>
 
       {/* RIGHT IMAGE (placeholder) */}
@@ -31,7 +31,7 @@ export default function ServicesSection() {
         }}
       >
         {/* ADD IMAGE HERE */}
-        <img src="public/ata2.jpg" className="w-full h-full object-cover" />
+        <img src="/ata2.jpg" className="w-full h-full object-cover" />
       </div>
 
       {/* CENTER CONTENT */}
@@ -52,8 +52,6 @@ export default function ServicesSection() {
         <div className="mt-16 w-48 h-3 rounded-full bg-gradient-to-r from-[#8f7424] via-[#f5e7a1] to-[#8f7424] mx-auto" />
       </div>
 
-      {/* GOLD BACKGROUND GLOW */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.12),transparent_60%)]" />
     </section>
   );
 }

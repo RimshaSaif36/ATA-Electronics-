@@ -2,13 +2,9 @@ import React from "react";
 
 export default function SinceSection() {
   return (
-    <section className="relative min-h-screen bg-black flex items-center overflow-hidden px-6">
+    <section className="relative min-h-screen flex items-center overflow-hidden px-6">
 
-      {/* GOLDEN ATMOSPHERIC GLOWS */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-[20%] top-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#d4af37]/10 rounded-full blur-[160px]" />
-        <div className="absolute right-[10%] bottom-[10%] w-[500px] h-[500px] bg-[#d4af37]/10 rounded-full blur-[140px]" />
-      </div>
+
 
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center w-full">
 
@@ -54,7 +50,7 @@ export default function SinceSection() {
               />
 
               {/* GOLDEN GLOW */}
-              <div className="absolute inset-0 bg-[#d4af37]/25 blur-3xl -z-10" />
+              <div className="absolute inset-0 bg-[#d4af37]/10 blur-3xl -z-10" />
 
               {/* SOFT BORDER */}
               <div className="absolute inset-0 border border-[#d4af37]/20 pointer-events-none" />

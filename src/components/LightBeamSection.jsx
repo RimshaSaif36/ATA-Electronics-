@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion as Motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 export default function LightBeamSection() {
@@ -17,7 +17,7 @@ export default function LightBeamSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-screen bg-black overflow-hidden flex items-center justify-center"
+      className="relative h-screen overflow-hidden flex items-center justify-center"
     >
       {/* LEFT IMAGE PLACEHOLDER */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1/3 h-[70%] ">
@@ -38,7 +38,7 @@ export default function LightBeamSection() {
       </div>
 
       {/* LIGHT BEAM */}
-      <motion.div
+      <Motion.div
         style={{ x: beamX }}
         className="absolute top-1/2 h-[2px] w-[40%]
         bg-gradient-to-r from-transparent via-[#d4af37] to-transparent
@@ -46,14 +46,14 @@ export default function LightBeamSection() {
       />
 
       {/* GLOW */}
-      <motion.div
+      <Motion.div
         style={{ x: beamX }}
         className="absolute top-1/2 h-[120px] w-[120px]
-        bg-[#d4af37]/30 rounded-full blur-3xl"
+        bg-[#d4af37]/10 rounded-full blur-3xl"
       />
 
       {/* TEXT */}
-      <motion.div
+      <Motion.div
         style={{ opacity: textOpacity, y: textY }}
         className="relative z-10 text-center px-6 max-w-2xl"
       >
@@ -66,7 +66,7 @@ export default function LightBeamSection() {
           <br />
           it’s emotion.
         </h2>
-      </motion.div>
+      </Motion.div>
     </section>
   );
 }
