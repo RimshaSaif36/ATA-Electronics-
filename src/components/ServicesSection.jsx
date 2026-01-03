@@ -1,0 +1,59 @@
+import React, { useEffect, useState } from "react";
+
+export default function ServicesSection() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <section className="relative min-h-screen bg-black overflow-hidden text-white flex items-center justify-center">
+
+      {/* LEFT IMAGE (placeholder) */}
+      <div
+        className="absolute left-0 top-1/2 w-[35%] h-[70%] -translate-y-1/2"
+        style={{
+          transform: `translateY(${scrollY * 0.15}px)`
+        }}
+      >
+        {/* ADD IMAGE HERE */}
+        <img src="public/ata(1).jpg" className="w-full h-full object-cover" />
+      </div>
+
+      {/* RIGHT IMAGE (placeholder) */}
+      <div
+        className="absolute right-0 top-1/2 w-[35%] h-[70%] -translate-y-1/2"
+        style={{
+          transform: `translateY(-${scrollY * 0.15}px)`
+        }}
+      >
+        {/* ADD IMAGE HERE */}
+        <img src="public/ata2.jpg" className="w-full h-full object-cover" />
+      </div>
+
+      {/* CENTER CONTENT */}
+      <div className="relative z-10 text-center max-w-xl px-6">
+        <p className="text-sm opacity-70 mb-3">Services</p>
+
+        <h2 className="text-4xl md:text-5xl font-semibold leading-tight">
+          Residential Lighting
+          <br />
+          Solutions
+        </h2>
+
+        <button className="mt-8 px-6 py-2 border border-white/60 rounded-full text-sm hover:bg-white hover:text-black transition">
+          SEE MORE
+        </button>
+
+        {/* GOLD BAR */}
+        <div className="mt-16 w-48 h-3 rounded-full bg-gradient-to-r from-[#8f7424] via-[#f5e7a1] to-[#8f7424] mx-auto" />
+      </div>
+
+      {/* GOLD BACKGROUND GLOW */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.12),transparent_60%)]" />
+    </section>
+  );
+}
